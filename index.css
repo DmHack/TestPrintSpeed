@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(54, 54, 171);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*  HEADER  */
+
+.icon_img {
+    width: 50px;
+    margin: 5px 5px 5px 5px
+}
+
+ul>li {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 60px;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li {
+    margin-left: 20px;
+    padding: 0px 10px 0px 10px;
+}
+
+.img_header {
+    margin: 15px;
+    width: 40px;
+}
+
+
+/*  MAIN  */
+
+
+.background-image {
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-image: url('./assets/img/fonts.png');
+    height: 100vh;
+}
+
+
+.back_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+}
+
+.back_text h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.back_text p {
+    display: flex;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.btn_start {
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 20px 10px 10px 10px;
+}
+
+
+.btn_start {
+    min-width: 250px;
+    min-height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129, 230, 217, 1) 0%, rgba(79, 209, 197, 1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(250px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+
+.btn_start:hover,
+.btn_start:focus {
+    transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+    opacity: 1;
+}
